@@ -12,10 +12,6 @@ datasource db {
 
 // Initial database configuration
 
-// generator client {
-//   provider = "prisma-client-js"
-// }
-
 model ClientInfo {
   id          Int           @id @default(autoincrement())
   createdAt   DateTime      @default(now())
