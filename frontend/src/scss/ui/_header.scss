@@ -1,0 +1,17 @@
+.header {
+    max-width: $wrapper-max-width;
+    margin: 0 auto;
+}
+
+.navbutton {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
