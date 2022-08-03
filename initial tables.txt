@@ -1,0 +1,30 @@
+CREATE TABLE `ClientInfo` (
+  `client_id` int NOT NULL AUTO_INCREMENT,
+  `client_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `client_phone` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `PrepaidCard` (
+  `prepaid_id` int NOT NULL AUTO_INCREMENT,
+  `client_id` int DEFAULT NULL,
+  `prepaid_amount` decimal(10,2) NOT NULL,
+  `tip_include` bit(10) DEFAULT NULL,
+  `service_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `service_cost` decimal(10,2) NOT NULL,
+  `prepaid_balance` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`prepaid_id`),
+  KEY `client_id` (`client_id`),
+  CONSTRAINT `prepaidcard_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `ClientInfo` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `TimesCard` (
+  `times_id` int NOT NULL AUTO_INCREMENT,
+  `client_id` int DEFAULT NULL,
+  `service_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `times_amount` int NOT NULL,
+  `times_left` int NOT NULL,
+  PRIMARY KEY (`times_id`),
+  KEY `client_id` (`client_id`),
+  CONSTRAINT `timescard_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `ClientInfo` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
