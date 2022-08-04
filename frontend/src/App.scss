@@ -1,2 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./scss/ui/footer.scss";
+
+.new-client-form {
+    padding: 2em 1em;
+}
+
+.client-table {
+    padding: 2em 1em;
+}
+
+.client-table #editButton {
+    margin: 0 0.5em;
+}
+
+.client-table #deleteButton {
+    margin: 0 0.5em;
+}
