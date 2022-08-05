@@ -12,13 +12,13 @@ export default function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#">Home</Nav.Link>
-                            <Nav.Link href="#about">About</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/about">About</Nav.Link>
                             <NavDropdown title="VIP" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#prepaidCard">Prepaid Card</NavDropdown.Item>
-                                <NavDropdown.Item href="#timesCard">Times Card</NavDropdown.Item>
+                                <NavDropdown.Item href="/prepaid-card">Prepaid Card</NavDropdown.Item>
+                                <NavDropdown.Item href="/times-card">Times Card</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#ClientInfo">Client Info</NavDropdown.Item>
+                                <NavDropdown.Item href="/client-info">Client Info</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

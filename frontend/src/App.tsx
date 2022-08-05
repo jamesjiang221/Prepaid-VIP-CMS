@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, Form, Table, Button } from 'react-bootstrap';
+
+// react-router-dom v6
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './pages/ui/Header';
 import Footer from './pages/ui/Footer';
@@ -9,7 +11,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HomePage />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/prepaid-cards" element={<PrepaidCardPage />} />
+          <Route path="/times-cards" element={<TimesCardPages />} />
+          <Route path="/" element={< />} /> */}
+        </Routes>
+      </Router>
+      
+       
       <Footer />
     </div>
   );
