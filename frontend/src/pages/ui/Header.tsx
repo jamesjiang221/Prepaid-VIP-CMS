@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <Navbar className='header' bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Prepaid and Times Card CMS</Navbar.Brand>
+                <Navbar.Brand href="/">Prepaid and Times Card CMS</Navbar.Brand>
                 <div className="navbuttons">
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

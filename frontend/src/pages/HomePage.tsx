@@ -4,7 +4,7 @@ import ClientOverview from '../components/home/clientOverview';
 
 export default function HomePage() {
     return (
-        <div className="App">
+        <div>
             <ClientInput />
             <ClientOverview />
         </div>

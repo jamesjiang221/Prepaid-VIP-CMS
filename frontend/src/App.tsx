@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './pages/ui/Header';
 import Footer from './pages/ui/Footer';
 import HomePage from './pages/HomePage';
+import PrepaidCardPage from './pages/PrepaidCardPage';
+import TimesCardPage from './pages/TimesCardPage';
 
 function App() {
   return (
@@ -15,9 +17,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/prepaid-cards" element={<PrepaidCardPage />} />
-          <Route path="/times-cards" element={<TimesCardPages />} />
-          <Route path="/" element={< />} /> */}
+          <Route path="/prepaid-card" element={<PrepaidCardPage />} />
+          <Route path="/times-card" element={<TimesCardPage />} />
+          {/* <Route path="/" element={< />} /> */}
         </Routes>
       </Router>
       
