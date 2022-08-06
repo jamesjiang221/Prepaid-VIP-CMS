@@ -37,6 +37,7 @@ model PrepaidCard {
 model TimesCard {
   id          Int @id @default(autoincrement())
   clientId    Int
+  serviceName String
   timesAmount Int
   timesLeft   Int
 
