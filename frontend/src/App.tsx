@@ -10,6 +10,8 @@ import PrepaidCardPage from './pages/PrepaidCardPage';
 import TimesCardPage from './pages/TimesCardPage';
 import AboutPage from './pages/AboutPage';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +23,8 @@ function App() {
           <Route path="/prepaid-card" element={<PrepaidCardPage />} />
           <Route path="/times-card" element={<TimesCardPage />} />
           <Route path="/about" element={<AboutPage />} />
+
+          <Route path="/client/submit" element={<AboutPage />} />
         </Routes>
       </Router>
       
