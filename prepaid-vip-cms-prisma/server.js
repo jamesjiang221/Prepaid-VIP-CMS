@@ -12,7 +12,18 @@ app.get("/", (req, res) => {
 })
 
 const PORT = process.env.PORT || 3001;
+
+const clientRouter = require('./controllers/clientInfo-controller')
+
+const apiRouter = express.Router();
+app.use('/', apiRouter)
+
+
+
+apiRouter.use('/client', clientRouter)
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
+
 
