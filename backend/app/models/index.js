@@ -16,5 +16,5 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.client_info = require("./clientInfo.model")(sequelize, Sequelize);
+db.model = require("./model")(sequelize, Sequelize);
 module.exports = db;
