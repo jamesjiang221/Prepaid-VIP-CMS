@@ -3,10 +3,10 @@ module.exports = (app) => {
     var router = require('express').Router();
 
     // Create a new ClientInfo
-    app.post('/clientInfo/create', clientInfo.create);
+    router.post('/create', clientInfo.create);
 
     // Retrieve all ClientInfos
-    app.get('/clientInfo/getAll', clientInfo.findAll);
+    router.get('/getAll', clientInfo.findAll);
 
     app.use('/api/clientInfo', router);
 }

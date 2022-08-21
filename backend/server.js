@@ -14,6 +14,8 @@ app.get("/", (req, res) => {
     res.send("Welcome to Prepaid-VIP-CMS API v0.2")
 })
 
+require('./app/routes/clientInfo.routes')(app);
+
 const PORT = process.env.PORT || 3001;
 
 // const clientRouter = require('./controllers/clientInfo-controller')

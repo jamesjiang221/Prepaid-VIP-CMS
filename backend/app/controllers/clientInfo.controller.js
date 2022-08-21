@@ -1,5 +1,7 @@
 const db = require("../models");
-const ClientInfo = db.client_info;
+// console.log(db.model.clientInfo);
+const ClientInfo = db.model.clientInfo;
+// console.log(ClientInfo);
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
